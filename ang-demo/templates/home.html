@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html ng-app="SuperHeroTrackr">
+  <head>
+    <meta charset="utf-8">
+    <title>Intro to AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  </head>
+  <body>
+    <!--<div ng-app="">
+      {{ batman }}
+      <input type="text" ng-model="batman" />
+      our data is named 'batman'. powerful for forms!
+    </div>-->
+    <div ng-controller="myFirstController">
+      <!-- binds our controller below to this div. controllers are kind of like components -->
+      {{ batMan }}
+      <!-- double curlies display data. it's how we render -->
+      <!-- works by accessing the 'scope' mega-object. think scope.batMan -->
+    </div>
+  </body>
+  <script>
+    var myapp = angular.module("SuperHeroTrackr", []);
+    myapp.controller("myFirstController", function($scope){
+      $scope.batMan = "Bruce Wayne";
+    });
+    // creates the 'ng-app' from above
+  </script>
+</html>
+
+<!-- library functionality at the top, action scripts at the bottom -->
